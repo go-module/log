@@ -82,7 +82,7 @@ func (cw *ConnWriter) connect() error {
 	}
 
 	cw.innerWriter = conn
-	cw.lg = log.New(conn, "", log.Ldate|log.Ltime)
+	cw.lg = log.New(conn, "", log.Ldate|log.Ltime|log.Lmicroseconds)
 	return nil
 }
 
